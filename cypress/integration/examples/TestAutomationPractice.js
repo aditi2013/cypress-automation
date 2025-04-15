@@ -17,12 +17,15 @@ describe('My second test suite', function() {
                 cy.wrap($el).click();
             }
         })
+        // Auto complete
         cy.get('#autocomplete').should('have.value', 'India');
-        
+        // Visible Invisible
         cy.get('#displayed-text').should('be.visible');
         cy.get('#hide-textbox').click();
         cy.get('#displayed-text').should('not.be.visible');
         cy.get('#show-textbox').click();
         cy.get('#displayed-text').should('be.visible');
+        // Radio buttons
+        cy.get('input[value="radio2"]').check().should('be.checked');
     });
 })
