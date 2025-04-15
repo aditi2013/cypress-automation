@@ -13,7 +13,7 @@ describe('My second test suite', function() {
         });
     });
 
-    // This is not from tutorial and this works on Electron browser
+    // This is not from tutorial and this works only on Electron browser
     it('Handling JS confirm - click cancel', ()=>{
         cy.visit('http://the-internet.herokuapp.com/javascript_alerts');
         cy.contains('Click for JS Confirm').click();
