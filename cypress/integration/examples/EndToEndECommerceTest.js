@@ -7,6 +7,7 @@ describe('End to end ecommerce test', function () {
     });
 
     it('Submit order test', function () {
+        // Cypress.config('defaultCommandTimeout', 10000);
         const productName = this.data.productName;
         cy.visit('https://rahulshettyacademy.com/loginpagePractise/#/');
         cy.get('#username').type(this.data.username);
