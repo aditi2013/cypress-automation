@@ -12,9 +12,13 @@
 // -- This is a parent command --
 // Cypress.Commands.add("login", (email, password) => { ... })
 //
-Cypress.Commands.add('submitFormDetails', () => {
-        cy.get("#country").type("India");
-        cy.wait(2000);
-        cy.get(".suggestions ul li a").click();
-        cy.get(".btn-success").click();
-});
+Cypress.Commands.add('submitFormDetails',()=>
+{
+        cy.get("#country").type("India")
+        cy.get(".suggestions ul li a").click()
+        cy.get(".btn-success").click()
+})
+
+
+
+
