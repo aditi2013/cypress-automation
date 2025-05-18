@@ -3,15 +3,20 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run",
+    "headedTest": "npx cypress run --headed",
+    "recordDashboardTest": "npx cypress run --record"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
+    "@cypress/browserify-preprocessor": "latest",
     "cypress": "^12.11.0"
   },
   "devDependencies": {
-    "cypress-iframe": "^1.0.1"
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.8.2"
   }
 }
