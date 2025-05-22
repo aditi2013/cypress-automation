@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-22T18:45:43.757Z",
+    "end": "2025-05-22T18:45:49.647Z",
+    "duration": 5890,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "33699162-d4a8-41a1-adf4-a269988f3403",
+      "title": "",
+      "fullFile": "cypress/integration/examples/TestAutomationPractice-alerts.js",
+      "file": "cypress/integration/examples/TestAutomationPractice-alerts.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1687ca30-e3b1-4869-9ca5-dee96f9e09b7",
+          "title": "My second test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "my first test case of second test suite",
+              "fullTitle": "My second test suite my first test case of second test suite",
+              "timedOut": null,
+              "duration": 1745,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/integration/examples/TestAutomationPractice-alerts.js\"\n}",
+              "code": "cy.visit('https://rahulshettyacademy.com/AutomationPractice/');\ncy.get('#alertbtn').click();\n// cy.get('[value=\"confirm\"]').click();\ncy.get('#confirmbtn').click();\ncy.on('window:alert', function (str) {\n  expect(str).to.equal('Hello , share this practice page and share your knowledge');\n});\ncy.on('window:confirm', function (str) {\n  expect(str).to.equal('Hello , Are you sure you want to confirm?');\n});",
+              "err": {},
+              "uuid": "812fec4d-0ab0-41b3-b74c-313ca6c9625e",
+              "parentUUID": "1687ca30-e3b1-4869-9ca5-dee96f9e09b7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Handling JS confirm - click cancel",
+              "fullTitle": "My second test suite Handling JS confirm - click cancel",
+              "timedOut": null,
+              "duration": 1901,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/integration/examples/TestAutomationPractice-alerts.js\"\n}",
+              "code": "cy.visit('http://the-internet.herokuapp.com/javascript_alerts');\ncy.contains('Click for JS Confirm').click();\ncy.on('window:confirm', function () {\n  return false;\n});\ncy.get('#result').contains('You clicked: Cancel');",
+              "err": {},
+              "uuid": "4e7f1bc2-e483-492b-bb22-1304abebd67f",
+              "parentUUID": "1687ca30-e3b1-4869-9ca5-dee96f9e09b7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "812fec4d-0ab0-41b3-b74c-313ca6c9625e",
+            "4e7f1bc2-e483-492b-bb22-1304abebd67f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3646,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

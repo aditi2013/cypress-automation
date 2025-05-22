@@ -17,6 +17,15 @@
   },
   "devDependencies": {
     "cypress-iframe": "^1.0.1",
-    "cypress-mochawesome-reporter": "^3.8.2"
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "multiple-cucumber-html-reporter": "^3.9.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "cypress/cucumberReports/result.json"
+    },
+    "filterSpecs": true,
+    "omitFiltered": true
   }
 }

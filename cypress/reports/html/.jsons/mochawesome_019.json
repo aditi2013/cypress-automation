@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-22T18:47:32.225Z",
+    "end": "2025-05-22T18:47:37.768Z",
+    "duration": 5543,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e4a980ce-a84c-4f7c-82fd-9acc5779b9bb",
+      "title": "",
+      "fullFile": "cypress/integration/examples/HandleChildTab.js",
+      "file": "cypress/integration/examples/HandleChildTab.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "84d70b84-1ea5-421a-8c77-4dd4240aadd0",
+          "title": "Handle child window test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Handle child window test case",
+              "fullTitle": "Handle child window test suite Handle child window test case",
+              "timedOut": null,
+              "duration": 4928,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/integration/examples/HandleChildTab.js\"\n}",
+              "code": "cy.visit('https://rahulshettyacademy.com/AutomationPractice/');\ncy.get('#opentab').invoke('removeAttr', 'target').click();\n// If we click new tab it opens a different site. Cypress is not allowing directly to access cross-origin pages so we need to \n// perform all operations in isolated block named origin\ncy.origin(\"https://www.qaclickacademy.com\", function () {\n  cy.get('#navbarSupportedContent a[href*=\"about\"]').click();\n  cy.get('.mt-50 h2').should('contain', 'Welcome to QAClick Academy');\n});",
+              "err": {},
+              "uuid": "6239c148-d8e0-4ede-927d-69d883f436db",
+              "parentUUID": "84d70b84-1ea5-421a-8c77-4dd4240aadd0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6239c148-d8e0-4ede-927d-69d883f436db"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4928,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

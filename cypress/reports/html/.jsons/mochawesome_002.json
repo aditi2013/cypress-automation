@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-22T18:44:41.028Z",
+    "end": "2025-05-22T18:44:51.068Z",
+    "duration": 10040,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3ac654dc-0bee-4dae-b7f2-64ba1ada623e",
+      "title": "",
+      "fullFile": "cypress/integration/examples/EndToEndECommerceWithEnvVars.js",
+      "file": "cypress/integration/examples/EndToEndECommerceWithEnvVars.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "42a0b594-d936-4e6d-a9f1-4bee2c698458",
+          "title": "End to End ecommerce Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Submit Order",
+              "fullTitle": "End to End ecommerce Test Submit Order",
+              "timedOut": null,
+              "duration": 9442,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/integration/examples/EndToEndECommerceWithEnvVars.js\"\n}",
+              "code": "var productName = this.data.productName;\nthis.homepage.goTo(Cypress.env('base_url') + \"/loginpagePractise/#\");\ncy.log(this.data.username);\nvar productPage = this.homepage.login(this.data.username, this.data.password);\nproductPage.pageValidation();\nproductPage.getCardCount().should('have.length', 4);\nproductPage.selectProduct(productName);\nproductPage.selectFirstProduct();\nvar cartPage = productPage.goToCart();\ncartPage.sumOfProducts().then(function (sum) {\n  expect(sum).to.be.lessThan(200000);\n});\nvar confirmationPage = cartPage.checkoutItems();\nconfirmationPage.submitFormDetails();\nconfirmationPage.getAlertMessage().should('contain', 'Success');",
+              "err": {},
+              "uuid": "1af1c235-4026-4a63-bf7d-13f17200ce6f",
+              "parentUUID": "42a0b594-d936-4e6d-a9f1-4bee2c698458",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1af1c235-4026-4a63-bf7d-13f17200ce6f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9442,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

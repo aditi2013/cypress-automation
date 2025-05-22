@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-22T18:45:26.532Z",
+    "end": "2025-05-22T18:45:29.474Z",
+    "duration": 2942,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9b20bfdd-0eb7-4e17-82d5-ad83359bfd70",
+      "title": "",
+      "fullFile": "cypress/integration/examples/HandleWebTables.js",
+      "file": "cypress/integration/examples/HandleWebTables.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "93bea4c4-cf07-4896-9ef1-684f8e67bf19",
+          "title": "Handle web tables",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Handle Web table",
+              "fullTitle": "Handle web tables Handle Web table",
+              "timedOut": null,
+              "duration": 1586,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/integration/examples/HandleWebTables.js\"\n}",
+              "code": "cy.visit('https://rahulshettyacademy.com/AutomationPractice/');\ncy.get('tr td:nth-child(2)').each(function ($el, index, $list) {\n  var text = $el.text();\n  if (text.includes('Python')) {\n    cy.get('tr td:nth-child(2)').eq(index).next().then(function (price) {\n      var priceText = price.text();\n      expect(priceText).to.equal('25');\n    });\n  }\n});",
+              "err": {},
+              "uuid": "56402263-4b7b-461c-aa17-56a4a3c13626",
+              "parentUUID": "93bea4c4-cf07-4896-9ef1-684f8e67bf19",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Experimental test",
+              "fullTitle": "Handle web tables Experimental test",
+              "timedOut": null,
+              "duration": 775,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/integration/examples/HandleWebTables.js\"\n}",
+              "code": "cy.visit('https://rahulshettyacademy.com/AutomationPractice/');\ncy.contains('Master Selenium Automation in simple Python Language').parent('tr').find('td:nth-child(3)').should('have.text', '25');",
+              "err": {},
+              "uuid": "035ab8ac-f4df-49c3-a4a6-8ed34754bb91",
+              "parentUUID": "93bea4c4-cf07-4896-9ef1-684f8e67bf19",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "56402263-4b7b-461c-aa17-56a4a3c13626",
+            "035ab8ac-f4df-49c3-a4a6-8ed34754bb91"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2361,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

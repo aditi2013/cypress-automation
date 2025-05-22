@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-22T18:48:05.390Z",
+    "end": "2025-05-22T18:48:08.791Z",
+    "duration": 3401,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8af2fe71-bb65-441f-9787-fd84d15d82f2",
+      "title": "",
+      "fullFile": "cypress/integration/examples/Test1.js",
+      "file": "cypress/integration/examples/Test1.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d0fd4ecc-22f7-4b7e-9b17-16a2c81008a5",
+          "title": "My first test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "my first test case",
+              "fullTitle": "My first test suite my first test case",
+              "timedOut": null,
+              "duration": 2782,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/integration/examples/Test1.js\"\n}",
+              "code": "cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/');\ncy.get('.search-keyword').type('ca');\ncy.wait(2000);\ncy.get('.product').should('have.length', 5);\n// cy.get('.product:visible').should('have.length', 4);\n// cy.get('.products').as('prdLocator'); // prdLocator is used as alias here\n// cy.get('@prdLocator').find('.product').should('have.length', 4);\ncy.get('.products').find('.product').should('have.length', 4);\n// cy.get(':nth-child(3) > .product-action > button').click(); // Using CSS selector provided by cypress\ncy.get('.products').find('.product').eq(1).contains('ADD TO CART').click();\ncy.get('.products').find('.product').each(function ($el, indexe, $list) {\n  var vegName = $el.find('h4.product-name').text();\n  if (vegName.includes('Cashews')) {\n    cy.wrap($el).contains('ADD TO CART').click();\n  }\n});\ncy.get('.brand').should('have.text', 'GREENKART');\n// This is to print in logs\ncy.get('.brand').then(function (logoElement) {\n  cy.log(logoElement.text());\n});",
+              "err": {},
+              "uuid": "35ea9703-3213-49ce-8640-a0856fc63e02",
+              "parentUUID": "d0fd4ecc-22f7-4b7e-9b17-16a2c81008a5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "35ea9703-3213-49ce-8640-a0856fc63e02"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2782,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

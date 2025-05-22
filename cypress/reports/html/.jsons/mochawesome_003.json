@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-22T18:44:54.095Z",
+    "end": "2025-05-22T18:44:55.941Z",
+    "duration": 1846,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b24e58df-1a04-4b97-8eea-87caa4086796",
+      "title": "",
+      "fullFile": "cypress/integration/examples/HandleCalendarEvents.js",
+      "file": "cypress/integration/examples/HandleCalendarEvents.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "783a16eb-d250-40af-abe9-e1829691f1a5",
+          "title": "Handle Calendar Events",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Handle Calendar Events",
+              "fullTitle": "Handle Calendar Events Handle Calendar Events",
+              "timedOut": null,
+              "duration": 1257,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/integration/examples/HandleCalendarEvents.js\"\n}",
+              "code": "var monthNum = \"6\";\nvar dateNum = \"15\";\nvar yearNum = \"2027\";\nvar expectedValues = [monthNum, dateNum, yearNum];\ncy.visit('https://rahulshettyacademy.com/seleniumPractise/#/offers');\ncy.get('.react-date-picker__inputgroup').click();\ncy.get('.react-calendar__navigation__label__labelText').click();\ncy.get('.react-calendar__navigation__label__labelText').click();\ncy.contains(\"button\", yearNum).click();\ncy.get('.react-calendar__year-view__months__month').eq(Number(monthNum) - 1).click();\ncy.contains(\"abbr\", dateNum).click();\n//Assertions\ncy.get('.react-date-picker__inputGroup__input').each(function ($el, index) {\n  cy.wrap($el).invoke('val').should('eq', expectedValues[index]);\n});",
+              "err": {},
+              "uuid": "d4cda384-80de-4d82-8908-3280925276d4",
+              "parentUUID": "783a16eb-d250-40af-abe9-e1829691f1a5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d4cda384-80de-4d82-8908-3280925276d4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1257,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

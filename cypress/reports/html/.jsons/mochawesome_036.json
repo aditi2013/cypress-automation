@@ -1,0 +1,114 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-05-22T18:54:55.443Z",
+    "end": "2025-05-22T18:55:11.551Z",
+    "duration": 16108,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "801f1bc7-da18-4978-9de6-852f538110a8",
+      "title": "",
+      "fullFile": "cypress/integration/examples/EndToEndECommerceTest.js",
+      "file": "cypress/integration/examples/EndToEndECommerceTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "25490b66-09c6-4505-957a-d3702d68bad1",
+          "title": "End to End ecommerce Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Submit Order",
+              "fullTitle": "End to End ecommerce Test Submit Order",
+              "timedOut": null,
+              "duration": 154,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/integration/examples/EndToEndECommerceTest.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/EndToEndECommerceTest.js/End to End ecommerce Test -- Submit Order (failed).png\"\n      ],\n      [\n        \"/EndToEndECommerceTest.js/End to End ecommerce Test -- Submit Order (failed) (attempt 2).png\"\n      ]\n    ]\n  }\n]",
+              "code": "var productName = this.data.productName;\nthis.homepage.goTo(\"https://rahulshettyacademy.com/loginpagePractise/#\");\ncy.log(this.data.username);\nvar productPage = this.homepage.login(this.data.username, this.data.password);\nproductPage.pageValidation();\nproductPage.getCardCount().should('have.length', 4);\nproductPage.selectProduct(productName);\nproductPage.selectFirstProduct();\nvar cartPage = productPage.goToCart();\ncartPage.sumOfProducts().then(function (sum) {\n  expect(sum).to.be.lessThan(200000);\n});\nvar confirmationPage = cartPage.checkoutItems();\nconfirmationPage.submitFormDetails();\nconfirmationPage.getAlertMessage().should('contain', 'Success');",
+              "err": {
+                "message": "TypeError: Cannot read properties of undefined (reading 'productName')",
+                "estack": "TypeError: Cannot read properties of undefined (reading 'productName')\n    at Context.eval (cypress/integration/examples/EndToEndECommerceTest.js:15:38)",
+                "diff": null
+              },
+              "uuid": "95ff85b1-55cd-4b45-8da7-d6a70b72d918",
+              "parentUUID": "25490b66-09c6-4505-957a-d3702d68bad1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "95ff85b1-55cd-4b45-8da7-d6a70b72d918"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 154,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

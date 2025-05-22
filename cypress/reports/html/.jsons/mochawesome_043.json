@@ -1,0 +1,137 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2025-05-22T18:55:34.982Z",
+    "end": "2025-05-22T18:55:37.808Z",
+    "duration": 2826,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a04a229c-0273-4e31-a3d7-3582ec35a51d",
+      "title": "",
+      "fullFile": "cypress/integration/examples/HandleMouseHover.js",
+      "file": "cypress/integration/examples/HandleMouseHover.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d4f10b51-99ee-44b4-94aa-754422447827",
+          "title": "Handle Mouse hover",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Handle Mouse hover with click",
+              "fullTitle": "Handle Mouse hover Handle Mouse hover with click",
+              "timedOut": null,
+              "duration": 699,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/integration/examples/HandleMouseHover.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/HandleMouseHover.js/Handle Mouse hover -- Handle Mouse hover with click (failed).png\"\n      ],\n      [\n        \"/HandleMouseHover.js/Handle Mouse hover -- Handle Mouse hover with click (failed) (attempt 2).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit('https://rahulshettyacademy.com/AutomationPractice/');\ncy.get('div.mouse-hover-content').invoke('show');\ncy.contains('Top').click();\ncy.url().should('include', 'top');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://rahulshettyacademy.com/AutomationPractice/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND rahulshettyacademy.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://rahulshettyacademy.com/AutomationPractice/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND rahulshettyacademy.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:52423/__cypress/runner/cypress_runner.js:148084:82)\n    at visitFailedByErr (http://localhost:52423/__cypress/runner/cypress_runner.js:147476:12)\n    at <unknown> (http://localhost:52423/__cypress/runner/cypress_runner.js:148083:11)\n    at tryCatcher (http://localhost:52423/__cypress/runner/cypress_runner.js:18744:23)\n    at Promise._settlePromiseFromHandler (http://localhost:52423/__cypress/runner/cypress_runner.js:16679:31)\n    at Promise._settlePromise (http://localhost:52423/__cypress/runner/cypress_runner.js:16736:18)\n    at Promise._settlePromise0 (http://localhost:52423/__cypress/runner/cypress_runner.js:16781:10)\n    at Promise._settlePromises (http://localhost:52423/__cypress/runner/cypress_runner.js:16857:18)\n    at _drainQueueStep (http://localhost:52423/__cypress/runner/cypress_runner.js:13451:12)\n    at _drainQueue (http://localhost:52423/__cypress/runner/cypress_runner.js:13444:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:52423/__cypress/runner/cypress_runner.js:13460:5)\n    at Async.drainQueues (http://localhost:52423/__cypress/runner/cypress_runner.js:13330:14)\nFrom Your Spec Code:\n    at Context.eval (cypress/integration/examples/HandleMouseHover.js:4:11)\n\nFrom Node.js Internals:\n  Error: getaddrinfo ENOTFOUND rahulshettyacademy.com\n      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:71:26)",
+                "diff": null
+              },
+              "uuid": "922cfce4-fbb7-47a6-9a99-a73a2d88caa4",
+              "parentUUID": "d4f10b51-99ee-44b4-94aa-754422447827",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Handle mouse hover without click",
+              "fullTitle": "Handle Mouse hover Handle mouse hover without click",
+              "timedOut": null,
+              "duration": 688,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/integration/examples/HandleMouseHover.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/HandleMouseHover.js/Handle Mouse hover -- Handle mouse hover without click (failed).png\"\n      ],\n      [\n        \"/HandleMouseHover.js/Handle Mouse hover -- Handle mouse hover without click (failed) (attempt 2).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit('https://rahulshettyacademy.com/AutomationPractice/');\ncy.contains('Top').click({\n  force: true\n});\ncy.url().should('include', 'top');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://rahulshettyacademy.com/AutomationPractice/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND rahulshettyacademy.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://rahulshettyacademy.com/AutomationPractice/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND rahulshettyacademy.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:52423/__cypress/runner/cypress_runner.js:148084:82)\n    at visitFailedByErr (http://localhost:52423/__cypress/runner/cypress_runner.js:147476:12)\n    at <unknown> (http://localhost:52423/__cypress/runner/cypress_runner.js:148083:11)\n    at tryCatcher (http://localhost:52423/__cypress/runner/cypress_runner.js:18744:23)\n    at Promise._settlePromiseFromHandler (http://localhost:52423/__cypress/runner/cypress_runner.js:16679:31)\n    at Promise._settlePromise (http://localhost:52423/__cypress/runner/cypress_runner.js:16736:18)\n    at Promise._settlePromise0 (http://localhost:52423/__cypress/runner/cypress_runner.js:16781:10)\n    at Promise._settlePromises (http://localhost:52423/__cypress/runner/cypress_runner.js:16857:18)\n    at _drainQueueStep (http://localhost:52423/__cypress/runner/cypress_runner.js:13451:12)\n    at _drainQueue (http://localhost:52423/__cypress/runner/cypress_runner.js:13444:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:52423/__cypress/runner/cypress_runner.js:13460:5)\n    at Async.drainQueues (http://localhost:52423/__cypress/runner/cypress_runner.js:13330:14)\nFrom Your Spec Code:\n    at Context.eval (cypress/integration/examples/HandleMouseHover.js:10:11)\n\nFrom Node.js Internals:\n  Error: getaddrinfo ENOTFOUND rahulshettyacademy.com\n      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:71:26)",
+                "diff": null
+              },
+              "uuid": "6c47ca6a-cba9-41ca-bff2-248832daf2c9",
+              "parentUUID": "d4f10b51-99ee-44b4-94aa-754422447827",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "922cfce4-fbb7-47a6-9a99-a73a2d88caa4",
+            "6c47ca6a-cba9-41ca-bff2-248832daf2c9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1387,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

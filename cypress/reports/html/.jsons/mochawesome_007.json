@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-22T18:45:21.111Z",
+    "end": "2025-05-22T18:45:24.256Z",
+    "duration": 3145,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "dcff0789-d2ea-48d4-b78d-e0c0019265b2",
+      "title": "",
+      "fullFile": "cypress/integration/examples/HandleMouseHover.js",
+      "file": "cypress/integration/examples/HandleMouseHover.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b45d1d3f-9fff-451a-8310-cf0f91ed75ab",
+          "title": "Handle Mouse hover",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Handle Mouse hover with click",
+              "fullTitle": "Handle Mouse hover Handle Mouse hover with click",
+              "timedOut": null,
+              "duration": 1752,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/integration/examples/HandleMouseHover.js\"\n}",
+              "code": "cy.visit('https://rahulshettyacademy.com/AutomationPractice/');\ncy.get('div.mouse-hover-content').invoke('show');\ncy.contains('Top').click();\ncy.url().should('include', 'top');",
+              "err": {},
+              "uuid": "6a5b739a-fc9c-4632-9bf5-37bc22a1962a",
+              "parentUUID": "b45d1d3f-9fff-451a-8310-cf0f91ed75ab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Handle mouse hover without click",
+              "fullTitle": "Handle Mouse hover Handle mouse hover without click",
+              "timedOut": null,
+              "duration": 818,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/integration/examples/HandleMouseHover.js\"\n}",
+              "code": "cy.visit('https://rahulshettyacademy.com/AutomationPractice/');\ncy.contains('Top').click({\n  force: true\n});\ncy.url().should('include', 'top');",
+              "err": {},
+              "uuid": "6e23ff3c-66e8-41e9-b681-2d43c95bd6ef",
+              "parentUUID": "b45d1d3f-9fff-451a-8310-cf0f91ed75ab",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6a5b739a-fc9c-4632-9bf5-37bc22a1962a",
+            "6e23ff3c-66e8-41e9-b681-2d43c95bd6ef"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2570,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

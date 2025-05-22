@@ -1,0 +1,134 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-05-22T18:55:52.471Z",
+    "end": "2025-05-22T18:55:57.898Z",
+    "duration": 5427,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f7a6090d-1cfd-4b50-977b-ab2c98279f99",
+      "title": "",
+      "fullFile": "cypress/integration/examples/TestAutomationPractice-alerts.js",
+      "file": "cypress/integration/examples/TestAutomationPractice-alerts.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8e409fed-46c3-4850-b911-9fe70b075876",
+          "title": "My second test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "my first test case of second test suite",
+              "fullTitle": "My second test suite my first test case of second test suite",
+              "timedOut": null,
+              "duration": 700,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/integration/examples/TestAutomationPractice-alerts.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/TestAutomationPractice-alerts.js/My second test suite -- my first test case of second test suite (failed).png\"\n      ],\n      [\n        \"/TestAutomationPractice-alerts.js/My second test suite -- my first test case of second test suite (failed) (attempt 2).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit('https://rahulshettyacademy.com/AutomationPractice/');\ncy.get('#alertbtn').click();\n// cy.get('[value=\"confirm\"]').click();\ncy.get('#confirmbtn').click();\ncy.on('window:alert', function (str) {\n  expect(str).to.equal('Hello , share this practice page and share your knowledge');\n});\ncy.on('window:confirm', function (str) {\n  expect(str).to.equal('Hello , Are you sure you want to confirm?');\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://rahulshettyacademy.com/AutomationPractice/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND rahulshettyacademy.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://rahulshettyacademy.com/AutomationPractice/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND rahulshettyacademy.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:52423/__cypress/runner/cypress_runner.js:148084:82)\n    at visitFailedByErr (http://localhost:52423/__cypress/runner/cypress_runner.js:147476:12)\n    at <unknown> (http://localhost:52423/__cypress/runner/cypress_runner.js:148083:11)\n    at tryCatcher (http://localhost:52423/__cypress/runner/cypress_runner.js:18744:23)\n    at Promise._settlePromiseFromHandler (http://localhost:52423/__cypress/runner/cypress_runner.js:16679:31)\n    at Promise._settlePromise (http://localhost:52423/__cypress/runner/cypress_runner.js:16736:18)\n    at Promise._settlePromise0 (http://localhost:52423/__cypress/runner/cypress_runner.js:16781:10)\n    at Promise._settlePromises (http://localhost:52423/__cypress/runner/cypress_runner.js:16857:18)\n    at _drainQueueStep (http://localhost:52423/__cypress/runner/cypress_runner.js:13451:12)\n    at _drainQueue (http://localhost:52423/__cypress/runner/cypress_runner.js:13444:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:52423/__cypress/runner/cypress_runner.js:13460:5)\n    at Async.drainQueues (http://localhost:52423/__cypress/runner/cypress_runner.js:13330:14)\nFrom Your Spec Code:\n    at Context.eval (cypress/integration/examples/TestAutomationPractice-alerts.js:4:11)\n\nFrom Node.js Internals:\n  Error: getaddrinfo ENOTFOUND rahulshettyacademy.com\n      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:71:26)",
+                "diff": null
+              },
+              "uuid": "dd4b6a54-e419-451e-80ac-4b108cd83693",
+              "parentUUID": "8e409fed-46c3-4850-b911-9fe70b075876",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Handling JS confirm - click cancel",
+              "fullTitle": "My second test suite Handling JS confirm - click cancel",
+              "timedOut": null,
+              "duration": 1899,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/integration/examples/TestAutomationPractice-alerts.js\"\n}",
+              "code": "cy.visit('http://the-internet.herokuapp.com/javascript_alerts');\ncy.contains('Click for JS Confirm').click();\ncy.on('window:confirm', function () {\n  return false;\n});\ncy.get('#result').contains('You clicked: Cancel');",
+              "err": {},
+              "uuid": "6847b503-2aa1-4215-9666-2aca09abdedd",
+              "parentUUID": "8e409fed-46c3-4850-b911-9fe70b075876",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6847b503-2aa1-4215-9666-2aca09abdedd"
+          ],
+          "failures": [
+            "dd4b6a54-e419-451e-80ac-4b108cd83693"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2599,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
