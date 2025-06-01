@@ -1,5 +1,7 @@
 node_modules
-.DS_store
+.DS_store/
+.DS_Store/
 videos/
 .idea/
 .gradle/
+
